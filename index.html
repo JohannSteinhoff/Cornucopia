@@ -13,6 +13,8 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- Top bar -->
   <div class="topbar">
     <span>Locally rooted in San Marcos for over thirty years</span>
@@ -22,13 +24,18 @@
   <!-- Header / Nav -->
   <header class="site-header">
     <a href="#top" class="brand">
-      <span class="brand-mark"><img src="assets/images/logo-main.png" alt="The Cornucopia logo" /></span>
+      <span class="brand-mark"><img loading="lazy" src="assets/images/logo-icon.png" alt="The Cornucopia cornucopia icon" /></span>
       <span class="brand-words">
         <span class="brand-name">The Cornucopia</span>
         <span class="brand-tag">A Natural Foods Market</span>
       </span>
     </a>
-    <nav class="nav">
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="nav" id="nav-menu" aria-label="Main">
       <a href="#departments">Departments</a>
       <a href="#about">Our Story</a>
       <a href="#fresh">Fresh Daily</a>
@@ -62,9 +69,11 @@
     </a>
   </nav>
 
+  <main id="main">
+
   <!-- Hero -->
   <section class="hero" id="top">
-    <img class="hero-bg" src="assets/images/hero-banner.png" alt="A rainbow of fresh fruits and vegetables" />
+    <img class="hero-bg" src="assets/images/hero-banner.jpg" alt="A rainbow of fresh fruits and vegetables" fetchpriority="high" />
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="eyebrow eyebrow-rule">A Natural Foods Market · San Marcos, Texas</p>
@@ -110,8 +119,8 @@
     </div>
 
     <div class="dept-grid">
-      <article class="dept-card feature">
-        <div class="dept-img"><img src="assets/images/photo-1.jpg" alt="Fresh tomatoes, mushrooms and peppers" /></div>
+      <article class="dept-card">
+        <div class="dept-img"><img loading="lazy" src="assets/images/photo-1.jpg" alt="Fresh tomatoes, mushrooms and peppers" /></div>
         <div class="dept-body">
           <span class="num">01</span>
           <h3>Fresh Organic Produce</h3>
@@ -120,16 +129,16 @@
       </article>
 
       <article class="dept-card">
-        <div class="dept-img"><img src="images/proscoop.png" alt="Pro Scoop protein supplement on the shelf" /></div>
+        <div class="dept-img"><img loading="lazy" src="images/insidestore.jpg" alt="Fresh herb starts and a wall of supplements inside the shop" /></div>
         <div class="dept-body">
           <span class="num">02</span>
           <h3>Supplements &amp; Herbs</h3>
-          <p>Vitamins, tinctures, protein and remedies — with staff happy to help you find the right one.</p>
+          <p>Vitamins, tinctures, herbs and remedies — with staff happy to help you find the right one.</p>
         </div>
       </article>
 
       <article class="dept-card">
-        <div class="dept-img"><img src="images/bread.png" alt="A fresh-baked artisan sourdough loaf" /></div>
+        <div class="dept-img"><img loading="lazy" src="images/bread.jpg" alt="A fresh-baked artisan sourdough loaf" /></div>
         <div class="dept-body">
           <span class="num">03</span>
           <h3>Fresh-Baked Bread</h3>
@@ -138,7 +147,7 @@
       </article>
 
       <article class="dept-card">
-        <div class="dept-img"><img src="images/product.png" alt="A bottle of natural salad dressing in store" /></div>
+        <div class="dept-img"><img loading="lazy" src="images/product.jpg" alt="A bottle of natural salad dressing in store" /></div>
         <div class="dept-body">
           <span class="num">04</span>
           <h3>Pantry &amp; Grocery</h3>
@@ -147,7 +156,7 @@
       </article>
 
       <article class="dept-card">
-        <div class="dept-img"><img src="assets/images/square-2.png" alt="Bags of locally roasted coffee" /></div>
+        <div class="dept-img"><img loading="lazy" src="assets/images/square-2.jpg" alt="Bags of locally roasted coffee" /></div>
         <div class="dept-body">
           <span class="num">05</span>
           <h3>Coffee &amp; Local Goods</h3>
@@ -155,8 +164,8 @@
         </div>
       </article>
 
-      <article class="dept-card feature">
-        <div class="dept-img"><img src="assets/images/photo-2.jpg" alt="Fresh green vegetables on a rustic table" /></div>
+      <article class="dept-card">
+        <div class="dept-img"><img loading="lazy" src="assets/images/photo-2.jpg" alt="Fresh green vegetables on a rustic table" /></div>
         <div class="dept-body">
           <span class="num">06</span>
           <h3>Vegan &amp; Plant-Based</h3>
@@ -169,8 +178,8 @@
   <!-- About / Story -->
   <section class="about" id="about">
     <div class="about-media">
-      <img src="images/owners-brothers.png" alt="Brothers and co-owners David and Dan Davis behind the counter" class="about-photo" />
-      <img src="assets/images/square-1.png" alt="100% Organic Product badge" class="about-badge" />
+      <img loading="lazy" src="images/owners-brothers.jpg" alt="Brothers and co-owners David and Dan Davis behind the counter" class="about-photo" />
+      <img loading="lazy" src="assets/images/square-1.png" alt="100% Organic Product badge" class="about-badge" />
     </div>
     <div class="about-text">
       <p class="eyebrow eyebrow-dark">Our story</p>
@@ -195,24 +204,21 @@
       <p class="section-sub">Hover to take a look around — from the body-care shelves to the bulk wall and the friendly faces behind the counter.</p>
     </div>
     <div class="panels">
-      <div class="panel" tabindex="0" style="background-image:url('images/bodycare-aisle.png')">
+      <div class="panel" tabindex="0" style="background-image:url('images/bodycare-aisle.jpg')">
         <span class="panel-label">Natural body care &amp; gifts</span>
       </div>
-      <div class="panel" tabindex="0" style="background-image:url('images/grocery-aisle.png')">
+      <div class="panel" tabindex="0" style="background-image:url('images/grocery-aisle.jpg')">
         <span class="panel-label">Grocery, bulk &amp; local brands</span>
       </div>
-      <div class="panel" tabindex="0" style="background-image:url('images/staff-helping.png')">
+      <div class="panel" tabindex="0" style="background-image:url('images/staff-helping.jpg')">
         <span class="panel-label">Friendly, knowledgeable help</span>
-      </div>
-      <div class="panel" tabindex="0" style="background-image:url('images/insidestore.png')">
-        <span class="panel-label">Fresh herb starts in season</span>
       </div>
     </div>
   </section>
 
   <!-- Gallery / community kitchen -->
   <section class="section gallery" id="kitchen">
-    <img src="assets/images/square-1.png" alt="" class="float-badge" aria-hidden="true" />
+    <img loading="lazy" src="assets/images/square-1.png" alt="" class="float-badge" aria-hidden="true" />
     <div class="section-head">
       <p class="eyebrow eyebrow-dark">From our shelves &amp; kitchen</p>
       <h2>Made &amp; loved here</h2>
@@ -220,19 +226,19 @@
       <p class="section-sub">A little taste of what our community blends, bakes and brings to the table.</p>
     </div>
     <div class="collage">
-      <figure class="cut"><span class="cut-img"><img src="images/strawberry-bowl.png" alt="Strawberry and edible-flower yogurt bowl" /></span><figcaption>Strawberry &amp; flower bliss bowl</figcaption></figure>
-      <figure class="cut"><span class="cut-img"><img src="images/mango-bowl.png" alt="Mango granola breakfast bowl with raspberries" /></span><figcaption>Mango sunrise granola bowl</figcaption></figure>
-      <figure class="cut"><span class="cut-img"><img src="images/sky-hummus.png" alt="Blue spirulina hummus with seed crackers and carrots" /></span><figcaption>Sky Hummus — white bean &amp; miso</figcaption></figure>
-      <figure class="cut"><span class="cut-img"><img src="images/brownie.png" alt="Fudgy fresh-baked brownie" /></span><figcaption>Fudgy fresh-baked brownies</figcaption></figure>
-      <figure class="cut"><span class="cut-img"><img src="images/cacao-cup.png" alt="Superfood cacao cup on a folk-patterned plate" /></span><figcaption>Superfood cacao cups</figcaption></figure>
-      <figure class="cut"><span class="cut-img"><img src="images/lazy6-meat.png" alt="Lazy 6 Cattle Co local meat market" /></span><figcaption>Lazy 6 — local ranch meats</figcaption></figure>
-      <figure class="cut"><span class="cut-img"><img src="images/flower-heart.png" alt="A child holding a petal-topped heart treat" /></span><figcaption>Petal-topped treats for little hands</figcaption></figure>
+      <figure class="cut"><span class="cut-img"><img loading="lazy" src="images/strawberry-bowl.jpg" alt="Strawberry and edible-flower yogurt bowl" /></span><figcaption>Strawberry &amp; flower bliss bowl</figcaption></figure>
+      <figure class="cut"><span class="cut-img"><img loading="lazy" src="images/mango-bowl.jpg" alt="Mango granola breakfast bowl with raspberries" /></span><figcaption>Mango sunrise granola bowl</figcaption></figure>
+      <figure class="cut"><span class="cut-img"><img loading="lazy" src="images/sky-hummus.jpg" alt="Blue spirulina hummus with seed crackers and carrots" /></span><figcaption>Sky Hummus — white bean &amp; miso</figcaption></figure>
+      <figure class="cut"><span class="cut-img"><img loading="lazy" src="images/brownie.jpg" alt="Fudgy fresh-baked brownie" /></span><figcaption>Fudgy fresh-baked brownies</figcaption></figure>
+      <figure class="cut"><span class="cut-img"><img loading="lazy" src="images/cacao-cup.jpg" alt="Superfood cacao cup on a folk-patterned plate" /></span><figcaption>Superfood cacao cups</figcaption></figure>
+      <figure class="cut"><span class="cut-img"><img loading="lazy" src="images/lazy6-meat.jpg" alt="Lazy 6 Cattle Co local meat market" /></span><figcaption>Lazy 6 — local ranch meats</figcaption></figure>
+      <figure class="cut"><span class="cut-img"><img loading="lazy" src="images/flower-heart.jpg" alt="A child holding a petal-topped heart treat" /></span><figcaption>Petal-topped treats for little hands</figcaption></figure>
     </div>
   </section>
 
   <!-- Fresh banner -->
   <section class="fresh" id="fresh">
-    <img class="fresh-bg" src="assets/images/background.png" alt="Fresh leafy greens" />
+    <img loading="lazy" class="fresh-bg" src="assets/images/background.jpg" alt="Fresh leafy greens" />
     <div class="fresh-overlay"></div>
     <div class="fresh-content">
       <div class="ornament ornament-light" aria-hidden="true"><i></i></div>
@@ -249,7 +255,7 @@
       <div class="ornament" aria-hidden="true"><i></i></div>
     </div>
     <figure class="storefront">
-      <img src="images/storefront-wide.jpg" alt="The Cornucopia storefront in San Marcos with its sign and open door" />
+      <img loading="lazy" src="images/storefront-wide.jpg" alt="The Cornucopia storefront in San Marcos with its sign and open door" />
       <figcaption>Find us in the Thorpe Lane plaza — look for the cornucopia sign and the OPEN light.</figcaption>
     </figure>
     <div class="visit-grid">
@@ -278,21 +284,29 @@
         <p><a class="link" href="https://www.instagram.com/ilovecornucopia/" target="_blank" rel="noopener">@ilovecornucopia</a></p>
       </div>
     </div>
+    <figure class="visit-map">
+      <iframe
+        title="Map showing The Cornucopia at 1104 Thorpe Ln, San Marcos, TX"
+        src="https://www.google.com/maps?q=The%20Cornucopia%2C%201104%20Thorpe%20Ln%2C%20San%20Marcos%2C%20TX%2078666&z=13&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </figure>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-logo"><img src="assets/images/logo-main.png" alt="The Cornucopia" /></div>
+    <div class="footer-logo"><img loading="lazy" src="assets/images/logo-icon.png" alt="The Cornucopia" /></div>
     <p class="footer-tag">A Natural Foods Market · San Marcos, Texas</p>
     <div class="ornament ornament-light" aria-hidden="true"><i></i></div>
     <p class="fine">Mockup site · built with The Cornucopia's own brand imagery for design preview purposes.</p>
   </footer>
 
   <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
-    <button class="lightbox-close" aria-label="Close">&times;</button>
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox-close" aria-label="Close photo viewer">&times;</button>
     <figure class="lightbox-inner">
-      <img src="" alt="" />
+      <img loading="lazy" alt="" />
       <figcaption></figcaption>
     </figure>
   </div>
@@ -314,7 +328,7 @@
         entries.forEach(function (e) {
           if (e.isIntersecting) setActive(sections.indexOf(e.target));
         });
-      }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+      }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
 
       sections.forEach(function (s) { if (s) observer.observe(s); });
       setActive(0);
@@ -334,37 +348,74 @@
       revealEls.forEach(function (el) { revealObs.observe(el); });
 
       // Header gains a stronger shadow once you scroll past the hero top.
+      // Guarded so the DOM is only touched when the state actually changes.
       var header = document.querySelector('.site-header');
+      var isScrolled = false;
       window.addEventListener('scroll', function () {
-        header.classList.toggle('scrolled', window.scrollY > 40);
+        var next = window.scrollY > 40;
+        if (next !== isScrolled) { isScrolled = next; header.classList.toggle('scrolled', next); }
       }, { passive: true });
 
-      // Lightbox: click a gallery cutout to view it large.
+      // Mobile hamburger nav.
+      var navToggle = document.querySelector('.nav-toggle');
+      var navMenu = document.getElementById('nav-menu');
+      function setNav(open) {
+        navMenu.classList.toggle('open', open);
+        navToggle.classList.toggle('open', open);
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+      navToggle.addEventListener('click', function () {
+        setNav(!navMenu.classList.contains('open'));
+      });
+      navMenu.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') setNav(false);
+      });
+
+      // Lightbox with full focus management.
       var lb = document.getElementById('lightbox');
       var lbImg = lb.querySelector('img');
       var lbCap = lb.querySelector('figcaption');
+      var lbClose = lb.querySelector('.lightbox-close');
+      var lastFocused = null;
+
       function openLightbox(src, alt, caption) {
+        lastFocused = document.activeElement;
         lbImg.src = src; lbImg.alt = alt || ''; lbCap.textContent = caption || '';
         lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+        lbClose.focus();
       }
       function closeLightbox() {
         lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        lbImg.removeAttribute('src');
+        if (lastFocused && lastFocused.focus) lastFocused.focus();
       }
+
+      // Make each gallery cutout an accessible button that opens the lightbox.
       document.querySelectorAll('.cut').forEach(function (fig) {
         var img = fig.querySelector('img');
         var cap = fig.querySelector('figcaption');
         fig.style.cursor = 'zoom-in';
-        fig.addEventListener('click', function () {
-          openLightbox(img.src, img.alt, cap ? cap.textContent : '');
+        fig.setAttribute('tabindex', '0');
+        fig.setAttribute('role', 'button');
+        fig.setAttribute('aria-label', 'View photo: ' + (cap ? cap.textContent : (img.alt || 'image')));
+        function open() { openLightbox(img.src, img.alt, cap ? cap.textContent : ''); }
+        fig.addEventListener('click', open);
+        fig.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
         });
       });
+
       lb.addEventListener('click', function (e) {
-        if (e.target === lb || e.target.classList.contains('lightbox-close')) closeLightbox();
+        if (e.target === lb || e.target === lbClose) closeLightbox();
       });
       document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox();
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') { closeLightbox(); return; }
+        // Trap focus inside the dialog (only the close button is focusable).
+        if (e.key === 'Tab') { e.preventDefault(); lbClose.focus(); }
       });
     })();
   </script>

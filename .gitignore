@@ -2,3 +2,12 @@
 __pycache__/
 *.pyc
 .env
+
+# Local original-image backups from the optimization pass
+_image_backup/
+
+# Sales flyer — keep private, do not publish to the live site
+flyer.html
+flyer.pdf
+flyer_shot.png
+flyer_qr.png
