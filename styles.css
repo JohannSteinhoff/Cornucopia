@@ -67,15 +67,20 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .cut:focus-visi
   border-radius: 3px;
 }
 
-/* Skip link */
+/* Skip link — hidden until keyboard focus (never shows on scroll/overscroll) */
 .skip-link {
-  position: absolute; left: 12px; top: -60px; z-index: 300;
+  position: fixed; top: 0; left: 0; z-index: 300;
+  width: 1px; height: 1px; padding: 0; margin: -1px; border: 0;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%);
+  white-space: nowrap;
   background: var(--green-deep); color: #fff;
-  padding: .7rem 1.1rem; border-radius: 0 0 8px 8px;
   font-weight: 700; font-size: .85rem; letter-spacing: .04em;
-  transition: top .2s ease;
 }
-.skip-link:focus { top: 0; }
+.skip-link:focus {
+  width: auto; height: auto; margin: 0;
+  overflow: visible; clip: auto; clip-path: none;
+  left: 12px; padding: .7rem 1.1rem; border-radius: 0 0 8px 8px;
+}
 
 /* ---------- Eyebrow labels ---------- */
 .eyebrow {
@@ -232,14 +237,12 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .cut:focus-visi
 .site-header.scrolled { box-shadow: 0 6px 24px rgba(32,52,28,.12); background: rgba(245,239,224,.97); }
 .brand { display: flex; align-items: center; gap: .85rem; }
 .brand-mark {
-  width: 64px; height: 64px; flex: none;
-  border-radius: 50%; overflow: hidden; background: #fff;
-  display: grid; place-items: center;
+  display: block; flex: none;
+  border-radius: 10px; overflow: hidden;
   box-shadow: 0 2px 9px rgba(32,52,28,.14);
-  transition: width .3s ease, height .3s ease;
 }
-.brand-mark img { width: 96%; height: 96%; object-fit: contain; }
-.site-header.scrolled .brand-mark { width: 56px; height: 56px; }
+.brand-mark img { height: 58px; width: auto; display: block; transition: height .3s ease; }
+.site-header.scrolled .brand-mark img { height: 50px; }
 .brand-words { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-name {
   font-family: var(--font-display);
@@ -454,18 +457,15 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .cut:focus-visi
   padding: 3.5rem 1rem 2.6rem;
 }
 .footer-logo {
-  width: clamp(150px, 20vw, 188px);
-  height: clamp(150px, 20vw, 188px);
+  display: inline-block;
   margin: 0 auto 1.4rem;
-  background: var(--white);
-  border-radius: 50%;
+  border-radius: 14px;
   overflow: hidden;
-  display: grid; place-items: center;
   box-shadow: 0 14px 32px rgba(0,0,0,.28);
 }
 .footer-logo img {
-  width: 92%; height: 92%;
-  object-fit: contain;
+  height: clamp(120px, 16vw, 156px);
+  width: auto; display: block;
 }
 .footer-tag { font-family: var(--font-display); font-size: 1.1rem; letter-spacing: .02em; color: #e7d9b8; }
 .site-footer .ornament { margin: 1.2rem auto .8rem; }
